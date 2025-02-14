@@ -1,15 +1,3 @@
-//Crear una matriz de 10 * 10  con el siguiente dibujo
-/* @---------
-   -@--------
-   --@-------
-   ---@------
-   ----@-----
-   -----@----
-   ------@---
-   -------@--
-   --------@-
-   ---------@ */
-
 let guion = '-';
 let arroba = '@';
 let dibujo = [];
@@ -18,16 +6,23 @@ for (let fila = 0; fila < 10; fila++) {
     dibujo[fila] = [];
 
     for (let columna = 0; columna < 10; columna++) {
-        if (fila == columna) {
+        if (columna >= 4 && columna <= 5) {
             dibujo[fila][columna] = arroba;
             
-        } else {
-            dibujo[fila][columna] = guion;
-            
+        } else if ( fila >= 4 && fila <= 5) {
+            dibujo[fila][columna] = arroba;
         }
+        
+        else {
+            dibujo[fila][columna] = guion;
+        }
+        
     }
 }
+
 console.log(dibujo);
+
+
 
 
 

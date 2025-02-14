@@ -27,7 +27,11 @@ for (let fila = 0; fila < 10; fila++) {
         }
     }
 }
-console.log(dibujo);
+
+for (let index = 0; index < dibujo.length; index++) {
+    console.log(dibujo[index]);
+    
+}
 
 
 
