@@ -38,7 +38,10 @@ if (tamano < 5) {
                 // Para poner el @ en la  última columna
                 dibujo[fila][columna] = arroba;
             } else if (columna == tamano / 2) {
-                // Para poner el @ en la mitad de la matriz
+                // Para poner el @ en la mitad de la matriz (columna)
+                dibujo[fila][columna] = arroba;
+            } else if (fila == tamano / 2) {
+                // Para poner el @ en la mitad de la matriz (fila)
                 dibujo[fila][columna] = arroba;
             } else {
                 dibujo[fila][columna] = guion;
