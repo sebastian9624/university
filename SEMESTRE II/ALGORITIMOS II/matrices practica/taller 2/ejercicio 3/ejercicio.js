@@ -22,6 +22,7 @@ if (tamano < 5) {
     tamano = JSON.parse(prompt('Ingrese el tamaño de la matriz cuadrada: '));
 } else {
     for (let fila = 0; fila < tamano; fila++) {
+        // Crear un arreglo vacío por cada fila
         dibujo[fila] = [];
 
         for (let columna = 0; columna < tamano; columna++) {
@@ -44,6 +45,7 @@ if (tamano < 5) {
                 // Para poner el @ en la mitad de la matriz (fila)
                 dibujo[fila][columna] = arroba;
             } else {
+                // Para poner el - en el resto de la matriz
                 dibujo[fila][columna] = guion;
             }
         }
