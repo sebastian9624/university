@@ -1,7 +1,7 @@
 "use strict";
 import { variablesForm } from './variablesGenerales.js';
 import { setLocalStorage, getLocalStorage, deleteByIdLocalStorage } from './storage.js';  
-import { getINNERHTMLDataCitas, initCitas, validaFechaHora, reAgruparCitas, editarCita } from './funciones.js';
+import { getINNERHTMLDataCitas, initCitas, validaFechaHora, reAgruparCitas } from './funciones.js';
 
 /* Iniciamos las citas guardadas */
 initCitas();
@@ -48,7 +48,6 @@ let arrayCitas = []; //Array para guardar las citas
     }
     
 
-
     /* Guardamos la cita en localStorage - JSON.stringify = Convierte un objeto de JavaScript en un texto (string). */
     localStorage.setItem('cita', JSON.stringify(cita));
 
@@ -56,5 +55,7 @@ let arrayCitas = []; //Array para guardar las citas
     /* Leer localStorage */
     let dataCitas = getLocalStorage();
     getINNERHTMLDataCitas(dataCitas);
-});
 
+    /* Limpiamos el formulario */
+    document.querySelector('form').reset();
+});
