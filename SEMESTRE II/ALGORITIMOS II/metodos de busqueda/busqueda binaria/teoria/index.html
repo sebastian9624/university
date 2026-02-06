@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de busqueda</title>
+</head>
+<body>
+    <h1>Métodos de busqueda</h1>
+    
+
+    <h2>Búsqueda binaria</h2>
+    <p> EI proceso de búsqueda binaria utiliza el hecho de que los datos se encuentran
+        prdenados en forma ascendente. La primera comparación se hace con el dato de la
+        mitad del vector. Si se tiene suerte, ese'es el dato que se está buscando y no hay
+        que hacer más comparaciones; si no lo es, es porque el dato que se está buscando
+        es mayor o menor que el dato de la mitad del vector.
+        
+        
+        Si el dato que se está buscando es mayor que el dato de la mitad del vector,.
+        significa que, si el dato se halla en el vector, está a la derecha del dato de la mitad
+        sea que no habrá necesidad de comparar el dato que se está buscando con todos
+        los datos que están a la izquierda del dato de la mitad del vector
+        
+        
+        Luego de que hemos descartado la mitad de los datos, la siguiente comparación se
+        hará con el dato de la mitad, de la mitad en la cual posiblemente este el dato a
+        buscar. Así continuamos con este proceso hasta que se encuentre el dato, o se
+        detecte que el dato no está en el vector. Si tuviéramos un millón de datos, con una
+        sola comparación estamos ahorrando 500.000 comparaciones, con la segunda
+        comparación se ahorran 250.000 comparaciones, con la tercera se ahorran 125.000
+        comparaciones y así sucesivamente
+        Como se puede ver, la reducción del número de comparaciones es notable</p>
+        <p>
+            Antes que nada, debemos ordenar el array de menor a mayor con .sort() de Javascript
+
+            Ejemplo:
+            Let array = [60, 3, 12, 24, 12];
+            array.sort((a, b) => a - b);
+            console.log(array);
+        </p>
+        <p>
+            Divide y venceras: 
+            <ul>
+                <li>Divie la matriz aproxidamente a la mitad</li>
+                <li>Dividimos el problema en problemas mas simples</li>
+                <li>Descartamos la mitad de los elementos de la matriz donde no se encuentra el valor que buscamos</li>
+            </ul>
+        </p>
+        <p>
+            Ejemplo:
+            let arr = [ 3, 5, 8, 10, 12, 14, 16, 17, 18, 19, 20, 25, 30, 35, 40, 45, 50, 55, 60];
+                        s                                   m                                e
+
+            let val = 60;
+            let start = 0;
+            let end = arr.length - 1;
+            let middle = Math.floor((start + end) / 2);
+
+        </p>
+
+        <p>
+            Estrategia
+
+            
+        </p>
+</body>
+</html>

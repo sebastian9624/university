@@ -104,13 +104,18 @@ window.editarCita = function (idCita) {
     setLocalStorage(citasActualizadas);
 }
 
-//Función para eliminar cita
+// Función para eliminar cita
 window.deleteCita = function(idCita) {
     console.log('Eliminar cita con ID:', idCita);
+    
+    // Obtener todas las citas guardadas en localStorage
     let dataCitas = getLocalStorage();
+
+    // Filtrar todas las citas, excluyendo la que tiene el id que se quiere eliminar
     const nuevaDataCitas = dataCitas.filter(c => c.idCita !== Number(idCita));
+
+    // Guardar el nuevo array (sin la cita eliminada)
     setLocalStorage(nuevaDataCitas);
     getINNERHTMLDataCitas(nuevaDataCitas);
     alert('Cita eliminada correctamente');
 }
-

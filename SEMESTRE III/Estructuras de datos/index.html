@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de datos TEORIA</title>
+</head>
+<body>
+    <h1>Estructura de datos TEORIA</h1>
+    <p>Bienvenido a la página de teoría sobre estructuras de datos.</p>
+    <p>Un dato se almacena para ser utilizado posteriormente en el programa.
+        Se pueden almacenar en variables que se guardan en la memoria.
+        Los datos generan información que se puede procesar, se guardan en memoria RAM temporalmente.
+
+        Como funciona un compresión de datos:
+        La compresión de datos es un proceso que reduce el tamaño de un archivo o conjunto de datos.
+        Esto se logra mediante algoritmos que eliminan redundancias y representan la información de manera más eficiente.
+
+        ¿Para que se declaran las variables?
+        Para reservar un espacio en memoria y asociar un nombre a ese espacio, permitiendo almacenar y manipular datos de manera eficiente.
+
+        Que es desbordamiento de memoria:
+        El desbordamiento de memoria ocurre cuando un programa intenta utilizar más memoria de la que tiene disponible, lo que puede causar fallos o comportamientos inesperados.
+
+        Qué es un puntero?
+        Un puntero es una variable que almacena la dirección de otra variable en memoria, permitiendo acceder y manipular datos de manera indirecta.
+
+        
+        Que es paso por referencia:
+        El paso por referencia es un método de pasar argumentos a una función donde se envía la dirección de memoria de la variable, permitiendo que la función modifique el valor original de la variable.
+
+        Que es paso por valor:
+        El paso por valor es un método de pasar argumentos a una función donde se envía una copia del valor de la variable, lo que significa que cualquier modificación dentro de la función no afecta al valor original.
+
+        Tipo de datos compuestos:
+        Los tipos de datos compuestos son estructuras que permiten agrupar múltiples valores bajo un mismo nombre, como arreglos, listas, conjuntos y diccionarios. Estos tipos facilitan la organización y manipulación de datos complejos en programación.
+
+        <ul>
+            <li>Arreglos: Colecciones de elementos del mismo tipo, accesibles por índice.
+                Arreglo o vector unidimensional: Una lista lineal de elementos.
+            </li>
+            <li>Estructuras: Agrupaciones de datos que pueden contener diferentes tipos de información.</li>
+            <li>Uniones: Estructuras que permiten almacenar diferentes tipos de datos en la misma ubicación de memoria, pero solo uno a la vez.</li>
+        </ul>
+
+        Tipos de datos simples:
+        Los tipos de datos simples son los tipos básicos que representan un único valor, como enteros, flotantes, caracteres y booleanos. Estos tipos son fundamentales en la programación y se utilizan para construir estructuras más complejas.
+
+        Tarea:
+        Estructura compuesta o simple, analizar (Abstraciones de la realidad)
+
+        <h1> Estructura de datos en python </h1>
+        <p>En Python, las estructuras de datos son fundamentales para organizar y manipular información de manera eficiente. Algunas de las estructuras de datos más comunes en Python incluyen:</p>
+        <ul>
+            <li>Listas: Colecciones ordenadas y mutables de elementos.</li>
+            <li>Tuplas: Colecciones ordenadas e inmutables de elementos.</li>
+            <li>Conjuntos: Colecciones no ordenadas de elementos únicos.</li>
+            <li>Diccionarios: Colecciones de pares clave-valor, donde cada clave es única.</li>
+            <li>Colas: Estructuras que siguen el principio FIFO (First In, First Out).</li>
+            <li>Pilas: Estructuras que siguen el principio LIFO (Last In, First Out).</li>
+        </ul>
+        <p>Estas estructuras permiten a los programadores almacenar, acceder y manipular datos de manera eficiente, facilitando el desarrollo de aplicaciones y algoritmos complejos.</p>
+        <h2>Ejemplo de uso de estructuras de datos en Python</h2>
+        <pre>
+```python
+# Ejemplo de una lista en Python
+mi_lista = [1, 2, 3, 4, 5]
+print("Lista original:", mi_lista)
+# Agregar un elemento a la lista
+mi_lista.append(6)
+print("Lista después de agregar un elemento:", mi_lista)
+# Ejemplo de un diccionario en Python
+mi_diccionario = {'nombre': 'Juan', 'edad': 30}
+print("Diccionario original:", mi_diccionario)
+# Acceder a un valor por su clave
+print("Nombre:", mi_diccionario['nombre'])
+# Agregar un nuevo par clave-valor
+mi_diccionario['ciudad'] = 'Madrid'
+print("Diccionario después de agregar una ciudad:", mi_diccionario)
+```
+        </pre>
+        <p>En este ejemplo, se muestra cómo crear y manipular una lista y un diccionario en Python, destacando la flexibilidad y facilidad de uso de las estructuras de datos en este lenguaje.</p> 
+    </p>
+
+    <p>Pilas y colas son estructuras de datos lineales que permiten almacenar y manipular elementos de manera ordenada. Las pilas siguen el principio LIFO (Last In, First Out - Ultimo en entrar, primero en salir), lo que significa que el último elemento agregado es el primero en ser eliminado. 
+    Ejemplo de la vida real: una pila de platos, donde el último plato colocado en la pila es el primero en ser retirado.
+    
+    <h3>Operaciones basicas:</h3>
+    <ul>
+        <li>PUSH: apilar</li>
+        <li>POP: desapilar</li>
+        <li>TOP: obtener el elemento superior sin desapilar</li>
+    </ul>
+    <h3>Funciones para pilas:</h3>
+    <ul>
+        <li>Crear_pila(P: pila, ok: lógico)</li>
+        <li>Borrar_pila(P: pila, ok: lógico)</li>
+        <li>Vacia?(P: pila, resp: lógico)</li>
+        <li>Llena?(P: pila, resp: lógico)</li>
+        <li>Push(P: pila, X: elemento, resp: lógico)</li>
+        <li>Pop(P: pila, X: elemento, resp: lógico)</li>
+        <li>Top(P: pila, X: elemento, resp: lógico)</li>
+    </ul>
+    <h3>Aplicaciones</h3>
+    <ul>
+        <li>Recursión: Las pilas gestionan las llamadas a funciones recursivas</li>
+        <li>Algoritmo de retroceso (backtracking): Como en el caso de resolver laberintos o puzles
+            Ejemplo: - deshacer cambios en un editor de texto
+            - rehacer cambios en un editor de texto
+        </li>
+        <li>Evaluación de expresiones: Para evaluar expresiones aritmeticas (infix, postfix, prefix)</li>
+        <li>Control de navegación: En navegadores web para gestionar el historial de páginas visitadas</li>
+    </ul>
+    <h3>ALU</h3>
+    <p>Por su siglas ALU significa Unidad Aritmético Lógica. Es un componente fundamental en los procesadores que realiza operaciones aritméticas y lógicas.</p>
+    <h1>COLAS</h1>
+    <p>Las colas son estructuras de datos que permiten almacenar y manipular elementos de manera ordenada. A diferencia de las pilas, las colas siguen el principio FIFO (First In, First Out), donde el primer elemento agregado es el primero en ser eliminado.</p>
+    <h3>Operaciones básicas:</h3>
+    <ul>
+        <li>ENQUEUE: agregar un elemento a la cola</li>
+        <li>DEQUEUE: eliminar un elemento de la cola</li>
+        <li>FRONT: obtener el elemento frontal sin eliminarlo</li>
+    </ul>
+    <h2>Arboles y grafos</h2>
+    <h3>Arboles:</h3>
+    <p>Los árboles son estructuras de datos jerárquicas que consisten en nodos conectados por aristas. Cada árbol tiene un nodo raíz y puede tener nodos hijos, formando una estructura en forma de árbol. Los árboles se utilizan en diversas aplicaciones, como la representación de jerarquías, sistemas de archivos y bases de datos.
+    Tipos de árboles:
+    <ul>
+        <li>Árboles binarios: Cada nodo tiene como máximo dos hijos.</li>
+        <li>Árboles de búsqueda: Los nodos están organizados de tal manera que el hijo izquierdo es menor que el padre y el hijo derecho es mayor.</li>
+        <li>Árboles balanceados: Mantienen una altura equilibrada para garantizar un rendimiento óptimo en operaciones de búsqueda e inserción.</li>
+    </ul>
+    <p>Son utilizados para representar relaciones jerárquicas, como en sistemas de archivos, bases de datos y estructuras de organización.</p>
+    </p>
+</body>
+</html>

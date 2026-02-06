@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Tienda</title>
+</head>
+<body>
+    
+    <header>
+        <h1 >Bienvenido a la Tienda</h1>
+        <p>Explora nuestros productos y ofertas especiales.</p>
+        <nav id="inicio">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products_highlights">
+            <h2>Productos Destacados</h2>
+            <p>Descubre nuestros productos más populares y las últimas novedades.</p>
+            <!-- Aquí puedes agregar una lista o galería de productos -->
+        </section>
+
+        <section id="products_sale">
+            <h2>Ofertas Especiales</h2>
+            <p>Aprovecha nuestras ofertas exclusivas por tiempo limitado.</p>
+            <!-- Aquí puedes agregar detalles sobre las ofertas -->
+        </section>
+
+        <section id="about">
+            <h2>Acerca de</h2>
+            <p>Conoce más sobre nuestra tienda, misión y valores.</p>
+            <!-- Aquí puedes agregar información sobre la tienda -->
+        </section>
+
+        <section id="contact">
+            <h2> Formulario de contacto</h2>
+            <p>¿Tienes preguntas? Contáctanos para más información.</p>
+            <!-- Aquí puedes agregar un formulario de contacto o información de contacto -->
+
+            <form>
+                <label for="name">Introduzca su nombre:</label> 
+                <input type="text" id="name" name="name" required>
+
+                <br><br>
+
+                <label for="birthday">Introduzca su fecha de nacimiento:</label>
+                <input type="date" id="birthday" name="birthday" required>
+                
+
+                <br><br>
+
+                <label for="color">Seleccione su color favorito:</label>
+                <input type="color" id="color" name="color" required>
+
+                <br><br>
+
+                <label for="password">Introduzca su contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <br><br>
+
+                <label for="myImage">Seleccione una imagen:</label>
+                <input type="file" id="myImage" name="myImage" accept="image/*">
+
+                <br><br>
+
+                <input type="submit" value="Enviar">
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tienda. Todos los derechos reservados.</p>
+        <button  onclick="location.href='#inicio'">Volver arriba</button>
+    </footer>
+</body>
+</html>

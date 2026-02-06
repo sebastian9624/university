@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+
+/* Configuración del Nav */
+.navbar {
+    background-color: #1a1a1a;    /* Mismo color que el footer */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Empuja a los extremos */
+    align-items: center;            /* Centra verticalmente logo y links */
+    padding: 30px; /* Añade un respiro constante a los lados (5%) */
+    border-bottom: 1px solid #333;  /* Línea sutil igual que el footer */
+    
+}
+
+/* Alineación del Logo + Texto */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;                      /* Espacio entre birrete y texto */
+}
+
+.icon-svg-nav {
+    width: 35px;
+    height: 35px;
+    fill: #ffffff;                  /* Birrete blanco */
+
+}
+
+
+/* Estilo del Menú Derecho */
+.right-menu {
+    display: flex;
+    list-style: none;               /* Quita los puntos */
+    margin: 0;
+    padding: 0;
+    gap: 10px;                      /* Espacio entre los enlaces */
+}
+
+.right-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+/* formulario central */
+
+.title-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    width: 400px;
+    min-height: 340px; 
+    margin: 40px auto; /* 40px arriba/abajo y centrado horizontal */
+    padding: 30px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Pone los inputs debajo de los labels */
+    width: 100%;           /* Ocupa todo el ancho del contenedor blanco */
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+/* Para que el textarea no se pueda deformar demasiado */
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.enviar {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #3939daff; /* Azul consistente con el resto del sitio */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+
+/* texto central después del form */
+
+.text-form {
+    text-align: center; /* Centra el texto y los spans internos */
+    padding: 20px 10px; 
+}
+
+.text-form p {
+    max-width: 600px;   /* Evita que el texto sea demasiado largo y difícil de leer */
+    margin: 0 auto;    /* Centra el bloque del párrafo si tiene max-width */
+    line-height: 1.6;  
+}
+
+.form-words {
+    color: #3939daff;
+}
+
+
+
+
+
+/* Estilos generales del footer */
+.pie-pagina {
+  background-color: #1a1a1a; /* Fondo oscuro */
+  color: #ffffff;
+  padding: 30px 0;
+  border-top: 1px solid #333; /* Línea sutil de separación */
+}
+
+/* Contenedor Flex para separar izquierda y derecha */
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;           /* Alinea verticalmente */
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Lista de redes sociales */
+.redes-sociales {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Espacio entre iconos */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de los iconos SVG */
+.icon-svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff; /* Color blanco inicial */
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
