@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Examen 1</title>
+</head>
+
+
+<body>
+    <header>
+
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">&#127891;</span>
+                <span class="logo-text">Universidad</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Programas</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Contáctanos</h2>
+            <form id="contactForm" class="contact-form">
+                <label for="name" class="form-label">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu correo electronico" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p>También puedes contactarnos al teléfono 
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                o enviarnos un correo a
+                <a href="mailto:contacto@universidad.com">contacto@universidad.com</a>
+            </p>
+        </section>
+    </main>
+    
+</body>
+</html>
