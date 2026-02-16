@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ============================================
+   VARIABLES CSS
+   ============================================ */
+
+:root {
+  /* Colores principales */
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --subscribe-color: #5cb85c;
+  --cart-color: #f0ad4e;
+  --danger-color: #d9534f;
+  --info-color: #5bc0de;
+  
+  /* Colores de texto */
+  --text-dark: #333;
+  --text-medium: #555;
+  --text-light: #757575;
+  --text-lighter: #95a5a6;
+  
+  /* Colores de fondo */
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --bg-dark: #2c3e50;
+  
+  /* Bordes */
+  --border-color: #ddd;
+  --border-light: #e0e0e0;
+  
+  /* Espaciado */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-xl: 60px;
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 15px rgba(0, 0, 0, 0.2);
+  
+  /* Tipografía */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
+}
+
+/* ============================================
+   RESET Y ESTILOS GENERALES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-dark);
+  line-height: 1.6;
+  padding-top: 70px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================================
+    GRID 
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-contact {
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-lg);
+}
+
+.grid-item {
+  width: 100%;
+}
+
+/* ============================================
+   NAVEGACIÓN
+   ============================================ */
+
+.navbar {
+  position: fixed; /* position fixed sirve para mantener la barra de navegación fija en la parte superior mientras se desplaza la página */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #343a40;
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+  padding: 0;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.navbar-nav {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.navbar-nav li a {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 8px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+
+/* ============================================
+   BOTONES
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+
+.btn-send {
+  background-color: #428bca;
+  color: white;
+}
+
+
+.btn-subscribe {
+  background-color: var(--subscribe-color);
+  color: white;
+}
+
+
+.btn-cart {
+  background-color: var(--cart-color);
+  color: white;
+}
+
+
+/* ============================================
+   SECCIÓN HERO
+   ============================================ */
+
+.hero-section {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 60px;
+  color: white;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ============================================
+   GALERÍA DE PRODUCTOS
+   ============================================ */
+
+.gallery-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-light);
+}
+
+.product-item {
+  margin-bottom: var(--spacing-md);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ============================================
+   SECCIÓN DE SUSCRIPCIÓN
+   ============================================ */
+
+.subscription-section {
+  padding: 50px 0;
+  background-color: var(--bg-white);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.subscription-content {
+  text-align: center;
+}
+
+.subscription-title {
+  font-size: 28px;
+  color: #424242;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.subscription-description {
+  color: var(--text-light);
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--spacing-sm);
+  max-width: 700px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   FORMULARIOS
+   ============================================ */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-family: var(--font-primary);
+  transition: all 0.3s ease;
+}
+
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  margin-top: var(--spacing-md);
+}
+
+/* Estilos para formulario */
+.subscription-form .form-group {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 200px;
+}
+
+.subscription-form .form-group label {
+  margin-bottom: 0;
+}
+
+.subscription-form .btn {
+  padding: 11px 30px;
+  font-weight: bold;
+}
+
+/* ============================================
+   SECCIÓN DE CONTACTO
+   ============================================ */
+
+.contact-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-light);
+}
+
+.section-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-title {
+  font-size: 32px;
+  color: #424242;
+  font-weight: 600;
+}
+
+.contact-title small {
+  display: block;
+  color: var(--text-light);
+  font-size: 16px;
+  margin-top: var(--spacing-xs);
+  font-weight: 400;
+}
+
+.contact-info {
+  padding: var(--spacing-md);
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.contact-info p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-medium);
+  line-height: 1.8;
+}
+
+.contact-info address {
+  line-height: 2;
+  color: #666;
+  font-style: normal;
+}
+
+.contact-info strong {
+  color: var(--text-dark);
+  font-size: 18px;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-form {
+  background-color: var(--bg-white);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.main-footer {
+  background-color: var(--bg-dark);
+  color: #ecf0f1;
+  padding: 50px 0 20px;
+  margin-top: var(--spacing-xl);
+}
+
+.footer-subscription {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.main-footer .subscription-title {
+  color: #ecf0f1;
+}
+
+.main-footer .subscription-description {
+  color: #bdc3c7;
+}
+
+
+/* Redes Sociales */
+.social-links {
+  margin: var(--spacing-lg) 0;
+  text-align: center;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.social-list li a {
+  color: #ecf0f1;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+
+
+.copyright {
+  color: var(--text-lighter);
+  font-size: 14px;
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid #34495e;
+  text-align: center;
+}
+
+

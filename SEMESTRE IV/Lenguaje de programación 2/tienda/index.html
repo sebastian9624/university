@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gems - Tienda de camisetas gráficas y suéteres para hombres y mujeres">
+  <title>Clothing Store SSV</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Navegación Principal -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container">
+      <div class="navbar-content">
+        
+        <a href="#home" class="navbar-brand">SSV</a>
+        
+        <div class="navbar-menu" id="navbar-menu">
+          <ul class="navbar-nav">
+            <li><a href="#mens">Hombres</a></li>
+            <li><a href="#womens">Mujeres</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+          <a href="#cart" class="btn btn-cart">Carrito</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección Hero/Inicio -->
+  <header class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">SSV</h1>
+        <h2 class="hero-subtitle">Tienda de ropa a la moda </h2>
+      </div>
+    </div>
+  </header>
+
+  <!-- Galería de Productos -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="grid-item">
+          <article class="product-item">
+            <img src="https://s-media-cache-ak0.pinimg.com/564x/65/95/27/65952716d3ce9a43635bb8fadf34b8c1.jpg" 
+                 alt="Producto de moda 1">
+          </article>
+        </div>
+     
+        <div class="grid-item">
+          <article class="product-item">
+            <img src="https://s-media-cache-ak0.pinimg.com/564x/0c/21/42/0c21426b467e6fc2ccb31703b8a2be9a.jpg" 
+                 alt="Producto de moda 2">
+          </article>
+        </div>
+        
+        <div class="grid-item">
+          <article class="product-item">
+            <img src="https://s-media-cache-ak0.pinimg.com/564x/6b/6e/b3/6b6eb358c01037c9f566f61a21d563dc.jpg" 
+                 alt="Producto de moda 3">
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Suscripción -->
+  <section class="subscription-section">
+    <div class="container">
+      <div class="subscription-content">
+        <h3 class="subscription-title">Suscríbete para ganar descuentos</h3>
+        <p class="subscription-description">Ingresa tu nombre y correo electrónico</p>
+
+        <form action="#" method="post" class="subscription-form">
+          <div class="form-group">
+            <label for="subscription-name">Nombre</label>
+            <input type="text" class="form-control" id="subscription-name" name="name" placeholder="Tu nombre"required>
+          </div>
+          <div class="form-group">
+            <label for="subscription-email">Email</label>
+            <input type="email" class="form-control" id="subscription-email" name="email" placeholder="Tu correo electrónico" required>
+          </div>
+          <button type="submit" class="btn btn-subscribe">Suscribirse</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="contact-title">Contáctanos <small>Envíanos un mensaje para más información</small></h2>
+      </div>
+      
+      <div class="grid grid-contact">
+        <div class="grid-item">
+          <div class="contact-info">
+            <p>Envíanos un mensaje o contáctanos desde la dirección a continuación.</p>
+            
+            <address>
+              <strong>SSV Clothing COL.</strong><br>
+              Calle 123<br>
+            </address>
+          </div>
+        </div>
+        
+        <div class="grid-item grid-item-large">
+          <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+              <label for="user-name">Nombre</label>
+              <input type="text" class="form-control" id="user-name" name="name" placeholder="Ingresa tu nombre" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="user-email">Email</label>
+              <input type="email" class="form-control" id="user-email" name="email" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="user-url">Sitio Web</label>
+              <input type="url" class="form-control" id="user-url" name="website"placeholder="Ingresa tu URL">
+            </div>
+            
+            <div class="form-group">
+              <label for="user-message">Mensaje</label>
+              <textarea name="message" id="user-message" class="form-control" rows="8" placeholder="Escribe tu mensaje"  required></textarea>
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn btn-send">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <!-- Suscripción en Footer -->
+      <div class="footer-subscription">
+        <h3 class="subscription-title">Suscríbete para ganar descuentos</h3>
+        <p class="subscription-description">Ingresa tu nombre y correo electrónico</p>
+
+        <form action="#" method="post" class="subscription-form">
+          <div class="form-group">
+            <label for="footer-subscription-name" >Nombre</label>
+            <input type="text" class="form-control" id="footer-subscription-name" name="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="footer-subscription-email" class="footer-subscription-email">Email</label>
+            <input type="email" class="form-control" id="footer-subscription-email" name="email" placeholder="Tu correo electrónico" required>
+          </div>
+          <button type="submit" class="btn btn-subscribe">Suscribirse</button>
+        </form>
+      </div>
+      
+      <!-- Redes Sociales -->
+      <nav class="social-links" aria-label="Redes sociales">
+        <ul class="social-list">
+          <li><a href="https://twitter.com/" target="_blank" >Twitter</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" >Facebook</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" >YouTube</a></li>
+        </ul>
+      </nav>
+      
+      <p class="copyright">&copy; Copyright 2026 - Clothing Store SSV</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
