@@ -1,0 +1,326 @@
+/* ============================================
+   QuizApp - Estilos Base
+   Examen Práctico - JavaScript y DOM
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ============================================
+   Contenedor Principal
+   ============================================ */
+
+.quiz-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   Utilidad para ocultar elementos
+   ============================================ */
+
+.hidden {
+    display: none !important;
+}
+
+/* ============================================
+   Pantalla de Inicio
+   ============================================ */
+
+#startScreen {
+    text-align: center;
+}
+
+#startScreen h1 {
+    font-size: 3rem;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #667eea;
+}
+
+/* ============================================
+   Botones
+   ============================================ */
+
+.btn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ============================================
+   Pantalla del Quiz
+   ============================================ */
+
+.quiz-header {
+    margin-bottom: 30px;
+}
+
+.progress {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.question-counter {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.question-container {
+    margin-bottom: 30px;
+}
+
+.question-container h2 {
+    font-size: 1.4rem;
+    color: #1a1a2e;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* ============================================
+   Opciones de Respuesta
+   ============================================ */
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 1rem;
+    text-align: left;
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+    border-color: #667eea;
+    background: #f0f4ff;
+}
+
+/* Clases para feedback visual - PARTE 3 del examen */
+.option-btn.correct {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.option-btn.incorrect {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+/* ============================================
+   Mensaje de Feedback
+   ============================================ */
+
+.feedback {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.feedback.correct {
+    background: #d4edda;
+    color: #155724;
+}
+
+.feedback.incorrect {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* ============================================
+   Pantalla de Resultados
+   ============================================ */
+
+#resultScreen {
+    text-align: center;
+}
+
+#resultScreen h2 {
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.player-name {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.score-circle span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.score-message {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* ============================================
+   Resumen de Respuestas
+   ============================================ */
+
+.summary-container {
+    text-align: left;
+    margin-bottom: 30px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.summary-item {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.summary-item.correct {
+    background: #d4edda;
+    border-left-color: #28a745;
+}
+
+.summary-item.incorrect {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+}
+
+.summary-item p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.summary-item .question-text {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.summary-item .answer-text {
+    color: #666;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 25px;
+    }
+    
+    #startScreen h1 {
+        font-size: 2.2rem;
+    }
+    
+    .question-container h2 {
+        font-size: 1.2rem;
+    }
+    
+    .score-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .score-circle span {
+        font-size: 2rem;
+    }
+}

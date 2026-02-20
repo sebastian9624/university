@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizApp - Examen Práctico</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Pantalla de Inicio -->
+        <div id="startScreen">
+            <h1>🧠 QuizApp</h1>
+            <p class="subtitle">Pon a prueba tus conocimientos</p>
+            <div class="input-group">
+                <input type="text" id="playerName" placeholder="Ingresa tu nombre">
+            </div>
+            <button id="startBtn" class="btn btn-primary">Comenzar Quiz</button>
+        </div>
+        
+        <!-- Pantalla del Quiz -->
+        <div id="quizScreen" class="hidden">
+            <div class="quiz-header">
+                <div class="progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p class="question-counter">
+                    Pregunta <span id="currentQ">1</span> de <span id="totalQ">5</span>
+                </p>
+            </div>
+            
+            <div class="question-container">
+                <h2 id="question">Aquí aparecerá la pregunta</h2>
+            </div>
+            
+            <div id="options" class="options-container">
+                <!-- Las opciones se generarán dinámicamente -->
+            </div>
+            
+            <p id="feedback" class="feedback hidden"></p>
+        </div>
+        
+        <!-- Pantalla de Resultados -->
+        <div id="resultScreen" class="hidden">
+            <h2>🎉 ¡Quiz Completado!</h2>
+            <p id="playerResult" class="player-name"></p>
+            <div class="score-circle">
+                <span id="scoreText">0/0</span>
+            </div>
+            <p id="scoreMessage" class="score-message"></p>
+            <div id="summary" class="summary-container">
+                <!-- El resumen se generará dinámicamente -->
+            </div>
+            <button id="restartBtn" class="btn btn-primary">Jugar de nuevo</button>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
